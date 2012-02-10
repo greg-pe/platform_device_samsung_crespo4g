@@ -159,3 +159,9 @@ service wimax_route /system/bin/route add default dev uwbr0
     class main
     disabled
     oneshot
+
+# Reboot into recovery by holding volume up and power
+service recovery /system/bin/shutdown -rr
+    disabled
+    oneshot
+    keycodes 115 116
